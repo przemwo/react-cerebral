@@ -67,7 +67,9 @@ class App extends Component {
         </header>
         <div className="posR tH pVl pHm mHa measure">
           <h3>{subTitle}</h3>
-          <button onClick={() => buttonClicked()}>
+          <button onClick={() => buttonClicked({
+              message: 'Hello from App component!'
+            })}>
             Update state
           </button>
           <View />
