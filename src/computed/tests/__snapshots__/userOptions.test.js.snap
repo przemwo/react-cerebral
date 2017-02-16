@@ -1,0 +1,16 @@
+exports[`userOptions() computed returns correct options for users select 1`] = `
+Array [
+  Object {
+    "label": "",
+    "value": "__NOVALUE__",
+  },
+  Object {
+    "label": "garth",
+    "value": "4643",
+  },
+  Object {
+    "label": "Guria",
+    "value": "36270",
+  },
+]
+`;

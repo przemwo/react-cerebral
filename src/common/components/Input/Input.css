@@ -1,0 +1,2 @@
+.message { display: none; }
+.message.active { display: block; }

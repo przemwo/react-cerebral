@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="no-touch has-animation">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Boilerplate demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fontsCSS" content="powel-ui-webfonts.woff.css">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <script>(function(b,a){if(('ontouchstart'in b)||(b.DocumentTouch&&(a instanceof DocumentTouch))){a.documentElement.className=a.documentElement.className.replace(/\bno-touch\b/,'touch')}a.documentElement.className=a.documentElement.className.replace(/\bno-js\b/,'js')}(window,document));</script>
+    <script><%= require('raw-loader!@powel/powelui/dist/powel-ui-head.min') %></script>
+    <% if (htmlWebpackPlugin.options.isProduction) { %>
+      <link rel="stylesheet" href="powel-ui.min.css">
+    <% } else { %>
+      <link rel="stylesheet" href="powel-ui.css">
+    <% } %>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

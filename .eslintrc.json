@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "powel",
+    "powel/babel",
+    "powel/import",
+    "powel/react"
+  ],
+  "rules": {}
+}

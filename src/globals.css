@@ -1,0 +1,11 @@
+:global {
+  .jcSB {
+    justify-content: space-between;
+  }
+
+  .nav > .nav-item > .nav-link {
+    line-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

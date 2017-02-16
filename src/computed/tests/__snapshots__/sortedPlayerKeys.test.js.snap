@@ -1,0 +1,7 @@
+exports[`sortedPlayerKeys() computed returns sorted player keys 1`] = `
+Array [
+  "187457c2",
+  "443fd35f",
+  "5a89a1d9",
+]
+`;
