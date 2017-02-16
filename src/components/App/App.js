@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'cerebral/react';
-import { state } from 'cerebral/tags';
+import { state, signal } from 'cerebral/tags';
 
 import { VIEWS } from 'common/constants';
 import Players from '../Players';
@@ -56,6 +56,7 @@ class App extends Component {
   render () {
     const { currentView } = this.props;
     const { subTitle } = this.props;
+    const { buttonClicked } = this.props;
 
     const View = viewToComponentMap[currentView];
 
@@ -66,6 +67,9 @@ class App extends Component {
         </header>
         <div className="posR tH pVl pHm mHa measure">
           <h3>{subTitle}</h3>
+          <button onClick={() => buttonClicked()}>
+            Update state
+          </button>
           <View />
         </div>
       </div>
@@ -79,9 +83,8 @@ App.propTypes = {
   subTitle: PropTypes.string
 };
 
-console.log(state);
-
 export default connect({
   currentView: state`app.currentView`,
-  subTitle: state`app.subTitle`
+  subTitle: state`app.subTitle`,
+  buttonClicked: signal`app.changeSubtitle`
 }, App);
