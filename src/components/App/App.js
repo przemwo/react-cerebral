@@ -56,6 +56,8 @@ class App extends Component {
   render () {
     const { currentView } = this.props;
     const { subTitle } = this.props;
+    const { changeSubtitle } = this.props;
+    const { toastMsg } = this.props;
     const { buttonClicked } = this.props;
 
     const View = viewToComponentMap[currentView];
@@ -67,10 +69,16 @@ class App extends Component {
         </header>
         <div className="posR tH pVl pHm mHa measure">
           <h3>{subTitle}</h3>
-          <button onClick={() => buttonClicked({
+          <button onClick={() => changeSubtitle({
               message: 'Hello from App component!'
             })}>
             Update state
+          </button>
+          <h3>{toastMsg}</h3>
+          <button onClick={() => buttonClicked({
+              repo: 'cerebral'
+            })}>
+            Show repo
           </button>
           <View />
         </div>
@@ -88,5 +96,7 @@ App.propTypes = {
 export default connect({
   currentView: state`app.currentView`,
   subTitle: state`app.subTitle`,
-  buttonClicked: signal`app.changeSubtitle`
+  changeSubtitle: signal`app.changeSubtitle`,
+  toastMsg: state`app.toastMsg`,
+  buttonClicked: signal`app.buttonClicked`
 }, App);

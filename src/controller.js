@@ -27,7 +27,8 @@ const controller = Controller({
   }),
   providers: [
     HttpProvider({
-      baseUrl: __API_ROOT__, // eslint-disable-line no-undef
+      // baseUrl: __API_ROOT__, // eslint-disable-line no-undef
+      baseUrl: 'https://api.github.com',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
